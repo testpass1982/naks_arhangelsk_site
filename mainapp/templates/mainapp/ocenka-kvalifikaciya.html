@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Аттестационный центр НАКС - Архагельск</title>
+
+    <!-- BOOTS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+
+    <!-- SCRIPT -->
+    <script src="js/w3.js"></script>
+    <!-- END SCRIPT -->
+
+    <!-- <link rel="stylesheet" href="fonts/font.css"> -->
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.css">
+
+
+    <!-- HEADER -->
+</head>
+
+<body>
+
+    <!-- Include HEADER -->
+    <div w3-include-html="includes/header.html"></div>
+    <!-- End Include HEADER -->
+
+    <!-- Include HEADER -->
+    <div w3-include-html="includes/modal-windows.html"></div>
+    <!-- End Include HEADER -->
+
+    <!-- Include MENU-header -->
+    <div w3-include-html="includes/menu-header.html"></div>
+    <!-- End Include MENU-header -->
+
+
+    <div class="otstup__line"></div>
+    <div class="container">
+        <button class="back__to__main" id="ocenka-kvalifikaciya">
+            <a href="index.html"> <img src="{% static 'img/back__to__main__arrow.png' %}" class="arrow__back__to__main text-align-center"
+                    alt=""> На главную</a>
+        </button>
+
+        <div class="row">
+            <div class="col-xl-7">
+                <div class="section__header d-inline-block">Центр оценки квалификаций</div>
+                <div class="line__section"></div>
+                <div class="header__name__service">
+                    Независимая оценка квалификаций
+                </div>
+                <button class="zayavka__button" data-toggle="modal" data-target="#modal-statement">
+                    Подать заявку
+                </button>
+
+                <p class="small__text__service">
+                    <a href="https://nark.ru/nok/">Независимая оценка квалификаций</a> проводится Центром оценки
+                    квалификации в соответствии с Федеральным
+                    законом от 3 июля 2016 г. N 238-ФЗ «О независимой оценке квалификации» и нормативно-правовыми
+                    актами Российской Федерации по независимой оценке квалификации.
+                </p>
+
+                <p class="small__text__service">
+                    Центр оценки квалификации наделяется полномочиями по проведению оценки квалификации <a href="http://spks.naks.ru/spks/about/">
+                        Советом по профессиональным квалификациям в области сварки.</a>
+                </p>
+
+                <p class="small__text__service">
+                    Независимая оценка квалификации проводится на основании действующих профессиональных <a href="profstandarti.html#profstandarti">Стандартов.</a>
+                </p>
+
+                <p class="small__text__service">
+                    Реестр сведений о проведении независимой оценки квалификации доступен по <a href="https://nok-nark.ru/">ссылке</a>
+                </p>
+                <p class="small__text__service">
+                    <a href="http://spks.naks.ru/cert/primery_zadaniy/">Примеры</a> заданий, входящих в состав
+                    оценочных средств, используемых Центром при проведении профессионального экзамена.
+                </p>
+                <p class="small__text__service">
+                    <a href="http://spks.naks.ru/spks/apelcom/">Сведения</a> об апелляционной комиссии по рассмотрению
+                    жалоб, связанных с результатами прохождения профессионального экзамена и выдачей свидетельства о
+                    квалификации.
+                </p>
+                <p class="small__text__service">
+                    <a href="#">Правила</a> проведения центром оценки квалификаций независимой оценки квалификации в
+                    форме профессионального экзамена, утвержденные постановлением Правительства Российской Федерации от
+                    16 ноября 2016 г. № 1204.
+                </p>
+                <p class="small__text__service">
+                    <a href="#">Образец</a> заявления для проведения независимой оценки квалификации на бумажном
+                    носителе и в электронной форме.
+                </p>
+                <p class="small__text__service">
+                    <a href="#">Перечень документов, необходимых для прохождения профессионального экзамена.</a>
+                </p>
+                <p class="small__text__service">
+                    <a href="https://nok-nark.ru/complaints/">Подать апелляцию в апелляционную комиссию.</a>
+                </p>
+
+                <p class="profstandart__text">
+                    <a href="">Профстандарты в области сварки</a>
+                </p>
+
+                <div class="line__service"></div>
+            </div>
+            <div class="col-xl-5 bd-sidebar-three">
+
+
+                <div class="section__header d-inline-block">Другие услуги</div>
+                <div class="line__section"></div>
+                <div class="box__serv">
+                    <a href="#">
+                        <div class="box__service">
+                            Аттестация <br>
+                            технологий сварки
+                        </div>
+                    </a>
+                </div>
+                <div class="box__serv">
+                    <a href="#">
+                        <div class="box__service">
+                            Разрушающий <br>
+                            и неразрушающий контроль
+                        </div>
+                    </a>
+                </div>
+                <div class="box__serv">
+                    <a href="specialis-svarochnogo-proizvodstva.html#specialist-spr">
+                        <div class="box__service">
+                            Специалист сварочного <br> производства
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <button class="back__to__main">
+            <a href="index.html"> <img src="{% static 'img/back__to__main__arrow.png' %}" class="arrow__back__to__main text-align-center"
+                    alt=""> На главную</a>
+        </button>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!-- Include BG_HEADER -->
+    <div w3-include-html="includes/info-block.html"></div>
+    <!-- End Include BG_HEADER -->
+
+
+    <!-- Include FOOTER -->
+    <div w3-include-html="includes/footer.html"></div>
+    <!-- End Include FOOTER -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+
+    <script src="js/script.js"></script>
+    <script src="/js/bootstrap.js"></script>
+
+    <script>
+        w3.includeHTML();
+    </script>
+
+</body>
+
+</html>

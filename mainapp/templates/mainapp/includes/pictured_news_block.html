@@ -1,0 +1,18 @@
+      <div class="col-xl-6">
+        <div class="read__news__hover">
+          <img class="d-block w-100" src="{{ picture.image.url }}" alt="First slide">
+        </div>
+        <div class="box__news__content__main">
+          <p class="news__naks__tag__maine d-inline-block">
+            {% for tag in post.tags.all %}
+              {{ tag.name }}
+            {% endfor %}
+          </p>
+          <p class="date__news__maine d-inline-block float-right">{{ post.published_date }}</p>
+          <a href="{% url 'detailview' 'post' post.pk %}#page-top">
+            <p class="text__content__news__main">
+              {{ post.title }}
+            </p>
+          </a>
+        </div>
+      </div>

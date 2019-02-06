@@ -1,0 +1,100 @@
+{% load static %}
+<!-- services block -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="section__header d-inline-block">Услуги центра</div>
+      <a href="profstandarti.html#profstandarti" class="link__profstandarti float-right">
+        <img src="{% static 'img/info__icon.png' %}" class="info-icon" alt=""> Профстандарты в области сварки</a>
+      <a href="profstandarti.html#profstandarti" class="link__profstandarti__mob float-right">
+        <img src="{% static 'img/info__icon.png' %}" class="info-icon" alt=""> Профстандарты в области сварки</a>
+      <div class="line__section"></div>
+    </div>
+    <div class="col-xl-3">
+      <div class="box__serv">
+        <a href="specialis-svarochnogo-proizvodstva.html#specialist-spr">
+          <div class="box__service">
+            Специалист <br>
+            сварочного производства
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-xl-3">
+      <div class="box__serv">
+        <a href="#">
+          <div class="box__service">
+            Аттестация <br>
+            технологий сварки
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-xl-3">
+      <div class="box__serv">
+        <a href="#">
+          <div class="box__service">
+            Разрушающий <br>
+            и неразрушающий контроль
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-xl-3">
+      <div class="box__serv">
+        <a href="ocenka-kvalifikaciya.html#ocenka-kvalifikaciya">
+          <div class="box__service">
+            Центр оценки <br>
+            квалификаций
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- services block end -->
+
+  <!-- news block -->
+  <div class="box__news">
+    <div class="row">
+      <div class="col-xl-2">
+        <div class="section__header">Новости</div>
+        <div class="line__section"></div>
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="col-xl-8">
+
+        <div class="row">
+          {% for post, picture in pictured_posts.items %}
+          {% include 'mainapp/includes/pictured_news_block.html' %}
+          {% endfor %}
+        </div>
+
+
+      </div>
+
+      <div class="col-xl-4">
+
+        {% for post in not_pictured_posts %}
+        {% include 'mainapp/includes/not_pictured_news_block.html' %}
+        {% endfor %}
+
+
+        <a href="all-news.html#all-news" class="all__news__button float-right">
+          Все новости <img src="{% static 'img/arrow__next-01.png' %}" class="" alt="">
+        </a>
+      </div>
+    </div>
+
+
+  </div>
+
+</div>
+
+<!-- news block and -->
+
+<!-- our client -->

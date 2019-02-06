@@ -1,0 +1,178 @@
+/* Modal Window */
+.modal{
+	z-index: 100001;
+}
+
+.modal .custom-control-label a {
+	text-decoration: underline;
+}
+.modal .custom-control-label a:hover {
+	text-decoration: none;
+}
+.modal-header {
+    border-bottom: none;
+	background-color: #ffffff;
+	color: #fff;
+}
+.modal-footer {
+	justify-content: flex-start;
+	border-top: none;
+}
+.modal-content {
+	background-color: #ffffff;
+	color: #3f3f3f;
+	border-radius: 0;
+	border: none;
+}
+
+.modal-content .form-control {
+	border: 1px #5671a7 solid;
+	background-color: transparent;
+	color: #3f3f3f;
+	font-size: 0.8rem;
+}
+.modal-content .form-control option {
+	color: #000;
+}
+.modal-content .custom-control-label::before {
+	background-color: transparent;
+	border: 1px solid #3f3f3f;
+}
+.modal-content .custom-control-input:checked ~ .custom-control-label::before {
+	color: #3f3f3f;
+	background-color: #3f3f3f;
+}
+.modal-header {
+	position: relative;
+	background-color: #465f92;
+	display: block;
+	border-radius: 0;
+}
+
+.custom-control-label::after{
+	cursor: pointer;
+}
+
+.custom-control-checkbox{
+	padding-left: 0.9rem;
+	cursor: pointer;
+}
+
+
+.modal-header p {
+	font-size: 0.875rem;
+	line-height: 20px;
+}
+
+.modal-header .close {
+	position: absolute;
+	right: 2rem;
+	top: 0;
+	font-size: 2.5rem;
+	font-weight: 100;
+	color: #3f3f3f;
+	opacity: 1;
+	line-height: inherit;
+	padding: 1rem;
+	margin: 0;
+}
+.close:not(:disabled):not(.disabled):hover, .close:not(:disabled):not(.disabled):focus {
+	color: #3f3f3f;
+	text-decoration: none;
+	opacity: .5;
+}
+
+input ~ label[for="soglasie"] {
+    width: 100%;
+	font-size: 16px;
+	margin: 25px 0px 0px 10px;
+	padding: 0px;
+ }
+
+ input ~ label[for="sogl"] {
+    width: 100%;
+	font-size: 16px;
+	margin: 10px 0px 0px 10px;
+	padding: 0px;
+ }
+
+.button__to__send_zayavka__formmodal{
+background-color: #465f92;
+border: none;
+color: #fff;
+font-size: 16px;
+border-radius: 3px;
+cursor: pointer;
+padding: 10px;
+}
+
+.button__to__send_zayavka__formmodal:hover {
+    background-color: #3e588b;    
+}
+
+.button__to__send_zayavka__formmodal:active {
+    background-color: #5671a7;
+}
+
+/* Выбор несколько из списка */
+
+.choose__item .items {
+    list-style: none;
+    padding: 0;
+    margin: 0;   
+}
+
+.choose__item .items li {
+    display: block;
+    margin: 10px 0px 0px 0px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 350;
+    border: 1px #5671a7 solid;
+    border-radius: 300px;
+    padding: 10px 20px;
+    margin: 0px 15px 15px 0px;
+    float: left;
+}
+
+.choose__item .items li:hover {
+    background-color: #5671a7;
+    transition: 0.5s; 
+	transform: scale(1.02, 1.02);
+	color: #fff;
+	border: 1px #5671a7 solid;
+    
+}
+
+.choose__item .items li:active {
+	background-color: #5671a7;	
+      
+}
+
+.selected {
+    background-color: #5671a7;
+    border-radius: 300px;
+	padding: 7px;
+	color: #fff;	
+}
+
+hr {
+    clear: both;
+}
+
+.checks {
+    opacity: 0;
+}
+
+
+.col-form-label-sm{
+	font-size: 16px;
+	margin-bottom: 10px;
+	margin-top: 5px;
+}
+
+.prikrepit__zayavku{
+	font-size: 16px;
+	margin-bottom: 10px;
+	margin-top: 5px;
+}

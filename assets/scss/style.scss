@@ -1,0 +1,99 @@
+@import "_legacy.scss";
+@import "_burger_menu.scss";
+@import "_modal__window.scss";
+@import "_reestr.scss";
+
+.header__logo__center{
+    @media screen and (max-width: 320px) {
+        width: 230px;
+        height: 45px;
+    }
+}
+
+
+.header__buttons-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (max-width: 1500px) {
+        margin: 0px;
+        margin-top: 15px;       
+    }    
+}
+
+
+.logo__block {
+    @media screen and (max-width: 1300px) {
+        display: none;    
+    }
+}
+
+
+.logo__block {
+    @media screen and (max-width: 995px) {
+        display: block;    
+    }
+}
+
+
+.logo__block {
+    @media screen and (max-width: 995px) {
+        display: flex;
+        justify-content: space-between; 
+    }
+}
+
+.block__obl__proff{
+    @media screen and (max-width: 1055px) {
+        display: inline;
+        flex-flow: row wrap;
+        justify-content: space-between;    
+    }
+}
+
+
+.info__number__atestat__block{
+    @media screen and (max-width: 480px) {
+        display: none;
+     }
+}
+
+.info__text__right{
+    @media screen and (max-width: 480px) {
+        display: none;
+     }
+}
+
+
+.basement__footer{
+    @media screen and (max-width: 480px) {
+        text-align: center;
+        }
+}
+
+.naks__media__logo{
+    @media screen and (max-width: 480px) {
+        display: none;
+     }
+}
+
+.razrabotano__v__naks__media{
+    @media screen and (max-width: 480px) {
+        right: 0;
+     }
+}
+
+.menu__footer{
+    @media screen and (max-width: 320px) {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 25px;
+     }
+     @media screen and (max-width: 992px) {
+        padding: 0;
+        margin: 0;
+        margin-bottom: 25px;
+         }
+}
