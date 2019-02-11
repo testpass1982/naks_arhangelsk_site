@@ -120,12 +120,15 @@ class PostPhotoAdmin(admin.ModelAdmin):
 class MessageAdmin(admin.ModelAdmin):
     list_display = ['title', 'typeof', 'params', 'sender_email', 'status']
 
+# admin.site.register(Menu)
+@admin.register(Menu)
+class MenuAdmin(admin.ModelAdmin):
+    list_display = ['title', 'url_code', 'url']
 
 admin.site.register(Tag)
 admin.site.register(Category)
 admin.site.register(Contact)
 admin.site.register(Staff)
 admin.site.register(Registry)
-admin.site.register(Menu)
 # admin.site.register(WeldOrg)
 # admin.site.register(Welder)
