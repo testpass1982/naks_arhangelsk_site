@@ -130,5 +130,6 @@ admin.site.register(Category)
 admin.site.register(Contact)
 admin.site.register(Staff)
 admin.site.register(Registry)
+#test
 # admin.site.register(WeldOrg)
 # admin.site.register(Welder)
