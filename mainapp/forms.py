@@ -2,7 +2,7 @@ from django import forms
 from django.core.validators import FileExtensionValidator, validate_email
 import os
 
-from .models import Post, Article, Document
+from .models import Post, Article, Document, Menu
 
 
 class ContentForm(forms.ModelForm):
@@ -111,3 +111,9 @@ class SearchRegistryForm(forms.Form):
     #             raise forms.ValidationError('File types is not allowed')
     #     except Exception as e:
     #         raise forms.ValidationError('Can not identify file type')
+
+
+class LinkEditForm(forms.Form):
+    class Meta:
+        model = Menu
+        fields = '__all__'

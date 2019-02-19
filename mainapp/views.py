@@ -6,9 +6,9 @@ from django.core.exceptions import ValidationError
 from django.utils import timezone
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .models import Post, PostPhoto, Tag, Category, Document, Article, Message, Contact
-from .models import Registry
+from .models import Registry, Menu
 from .models import Staff
-from .forms import PostForm, ArticleForm, DocumentForm
+from .forms import PostForm, ArticleForm, DocumentForm, LinkEditForm
 from .forms import SendMessageForm, SubscribeForm, AskQuestionForm, DocumentSearchForm, SearchRegistryForm
 from .adapters import MessageModelAdapter
 from .message_tracker import MessageTracker
@@ -49,7 +49,7 @@ def index(request):
 
     not_pictured_posts = Post.objects.filter(
         secondery_main=True).order_by('-published_date')[:3]
-    
+
     main_page_documents = Document.objects.filter(
         publish_on_main_page=True).order_by('-created_date')[:3]
 
@@ -58,11 +58,20 @@ def index(request):
     pictured_posts = {}
     for post in main_page_news:
         pictured_posts[post] = PostPhoto.objects.filter(post__pk=post.pk).first()
-    print(pictured_posts)
+    # print(pictured_posts)
 
     main_page_articles = Article.objects.filter(
         publish_on_main_page=True).order_by('-published_date')[:3]
 
+    main_page_links = Menu.objects.all()
+    links = {}
+    counter = 0
+    for link in main_page_links:
+        counter+=1
+        form = LinkEditForm()
+        links['link_{}'.format(counter)] = form
+
+    print('links', links)
     # print(request.resolver_match)
     # print(request.resolver_match.url_name)
 
@@ -74,7 +83,8 @@ def index(request):
         'docs': main_page_documents,
         'send_message_form': SendMessageForm(),
         'subscribe_form': SubscribeForm(),
-        'ask_question_form': AskQuestionForm()
+        'ask_question_form': AskQuestionForm(),
+        'links': links,
     }
 
     return render(request, 'mainapp/index.html', content)

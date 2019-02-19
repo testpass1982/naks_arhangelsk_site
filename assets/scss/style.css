@@ -908,6 +908,8 @@ button:focus { outline: none; }
 
 @media screen and (max-width: 1199px) { .date__po__mob { display: block; } }
 
+.regular_text { position: absolute; display: block !important; z-index: 1000; right: 0; top: -10px; font-size: 10px !important; color: blue !important; background-color: white !important; padding: 0px 2px !important; margin-left: 5px !important; }
+
 @media screen and (max-width: 320px) { .header__logo__center { width: 230px; height: 45px; } }
 
 .header__buttons-container { display: flex; flex-flow: row wrap; justify-content: space-between; align-items: center; }

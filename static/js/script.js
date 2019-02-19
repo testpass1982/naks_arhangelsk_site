@@ -108,8 +108,8 @@ $("#phone").mask("+8 (999) 999 - 99 - 99",{completed:function(){alert("Да, э�
   $("#phone2").mask("+8 (999) 999 - 99 - 99",{completed:function(){alert("Да, этой мой номер");}});
 };
 
-require(["popper"], function(popper) {
-  window.Popper = popper;
-  require(["bootstrap"]);
-});
+// require(["popper"], function(popper) {
+//   window.Popper = popper;
+//   require(["bootstrap"]);
+// });
 
