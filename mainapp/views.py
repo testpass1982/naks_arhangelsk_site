@@ -8,7 +8,7 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .models import Post, PostPhoto, Tag, Category, Document, Article, Message, Contact
 from .models import Registry, Menu
 from .models import Staff
-from .forms import PostForm, ArticleForm, DocumentForm, LinkEditForm
+from .forms import PostForm, ArticleForm, DocumentForm
 from .forms import SendMessageForm, SubscribeForm, AskQuestionForm, DocumentSearchForm, SearchRegistryForm
 from .adapters import MessageModelAdapter
 from .message_tracker import MessageTracker
@@ -64,14 +64,7 @@ def index(request):
         publish_on_main_page=True).order_by('-published_date')[:3]
 
     main_page_links = Menu.objects.all()
-    links = {}
-    counter = 0
-    for link in main_page_links:
-        counter+=1
-        form = LinkEditForm()
-        links['link_{}'.format(counter)] = form
 
-    print('links', links)
     # print(request.resolver_match)
     # print(request.resolver_match.url_name)
 
@@ -84,7 +77,6 @@ def index(request):
         'send_message_form': SendMessageForm(),
         'subscribe_form': SubscribeForm(),
         'ask_question_form': AskQuestionForm(),
-        'links': links,
     }
 
     return render(request, 'mainapp/index.html', content)
@@ -95,30 +87,31 @@ def news(request):
     title = "Новости АЦ"
     all_news = Post.objects.all().filter(
         publish_on_news_page=True).order_by('-created_date')
-    all_documents = Document.objects.all().order_by('-created_date')[:5]
-    side_posts = Post.objects.all().order_by('-created_date')[:4]
+    # all_documents = Document.objects.all().order_by('-created_date')[:5]
+    # side_posts = Post.objects.all().order_by('-created_date')[:4]
     post_list = [dict({'post': post, 'picture': PostPhoto.objects.filter(
         post__pk=post.pk).first()}) for post in all_news]
     # показываем несколько новостей на странице
-    paginator = Paginator(post_list, 5)
+    print(post_list)
+    paginator = Paginator(post_list, 6)
     page = request.GET.get('page')
     posts = paginator.get_page(page)
 
-    articles = Article.objects.all().order_by('-created_date')[:3]
+    # articles = Article.objects.all().order_by('-created_date')[:3]
 
-    print(request.resolver_match)
-    print(request.resolver_match.url_name)
-
+    # print(request.resolver_match)
+    # print(request.resolver_match.url_name)
+    print(posts)
     content = {
         'title': title,
         'news': posts,
-        'documents': all_documents,
-        'side_posts': side_posts,
-        'bottom_related': articles
+        # 'documents': all_documents,
+        # 'side_posts': side_posts,
+        # 'bottom_related': articles
 
     }
 
-    return render(request, 'mainapp/news.html', content)
+    return render(request, 'mainapp/all-news.html', content)
 
 
 def details(request, pk=None, content=None):
@@ -168,8 +161,8 @@ def details(request, pk=None, content=None):
     context.update(post_content)
     context['return_link'] = return_link
 
-    print(request.resolver_match)
-    print(request.resolver_match.url_name)
+    # print(request.resolver_match)
+    # print(request.resolver_match.url_name)
 
     return render(request, 'mainapp/page_details.html', context)
 
@@ -250,7 +243,7 @@ def contact(request):
 
     context['contacts'] = contacts
 
-    return render(request, 'mainapp/contact.html', context)
+    return render(request, 'mainapp/kontakti.html', context)
 
 
 def messages(request):

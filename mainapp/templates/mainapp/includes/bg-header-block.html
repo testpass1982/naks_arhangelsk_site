@@ -1,4 +1,5 @@
 {% load static %}
+{% load link_holders %}
 <!-- BG info -->
 <div class="bg-block-01">
     <div class="bg">
@@ -33,9 +34,9 @@
                         <div class="row">
                             <div class="col-xl-6">
                                 <div class="head__box__text">
-                                    <a href="info-dlya-zayavitelei.html#spisok-zayavok">
+                                    <a href="{% link_holder 'INFO'%}">
                                         <div class="head__box__info">
-                                            Заявки для <br> заявителей
+                                            {% title_holder 'INFO' %}
                                         </div>
                                     </a>
                                 </div>
@@ -171,18 +172,18 @@
 
                             <div class="col-xl-6">
                                 <div class="head__box__text">
-                                    <a href="info-dlya-zayavitelei.html#documenti-dlya-zayavki">
+                                    <a href="{% link_holder 'DOCUMENTS' %}">
                                         <div class="head__box__info">
-                                            Необходимые документы <br> для заявки
+                                            {% title_holder 'DOCUMENTS' %}
                                         </div>
                                     </a>
                                 </div>
                             </div>
                             <div class="col-xl-6">
                                 <div class="head__box__text">
-                                    <a href="oblast-deyatelnosti.html#oblast-deyatelnosti" title="Перечень наименований квалификаций">
+                                    <a href="{% link_holder 'OBLD' %}" title="Перечень наименований квалификаций">
                                         <div class="head__box__info">
-                                            Область деятельности <br> центра аттестации
+                                            {% title_holder 'OBLD' %}
                                         </div>
                                     </a>
                                 </div>

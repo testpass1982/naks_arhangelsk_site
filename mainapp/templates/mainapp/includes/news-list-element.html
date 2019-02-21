@@ -1,0 +1,17 @@
+{% load static %}
+            <div class="col-sm-6 col-xl-4">
+                <img class="d-block w-100" src="{% if element.picture %}
+                {{ element.picture.image.url }}
+                {% else %}
+                https://place-hold.it/300x200
+                {% endif %}" alt="First slide">
+                <div class="box__news__content__inside">
+                    <a href="{% url 'detailview' 'post' element.post.pk %}"><p class="news__naks__tag__inside d-inline-block">{{ element.post.title }}</p></a>
+                    <p class="date__news__inside float-right d-inline-block">{{ element.post.published_date|date:"d-m-Y" }}</p>
+                    
+                        <p class="text__content__news__inside">
+                            {{ element.post.short_description }}
+                        </p>
+    
+                </div>
+            </div>

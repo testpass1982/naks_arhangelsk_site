@@ -426,8 +426,6 @@ p { margin: 0; }
 
 .text__content__news__inside { font-size: 16px; font-weight: 500; color: #000; }
 
-.text__content__news__inside:hover { color: #0249b4; }
-
 .text__content__news__header { font-size: 18px; font-weight: 500; color: #000; }
 
 .news__naks__tag__inside { font-size: 14px; color: #1a2a4a; margin-bottom: 5px; }
@@ -908,7 +906,7 @@ button:focus { outline: none; }
 
 @media screen and (max-width: 1199px) { .date__po__mob { display: block; } }
 
-.regular_text { position: absolute; display: block !important; z-index: 1000; right: 0; top: -10px; font-size: 10px !important; color: blue !important; background-color: white !important; padding: 0px 2px !important; margin-left: 5px !important; }
+.edit_link { position: absolute; display: block !important; z-index: 1000; right: 0; top: -10px; font-size: 10px !important; color: blue !important; background-color: white !important; padding: 0px 2px !important; margin-left: 5px !important; }
 
 @media screen and (max-width: 320px) { .header__logo__center { width: 230px; height: 45px; } }
 

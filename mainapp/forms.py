@@ -111,9 +111,3 @@ class SearchRegistryForm(forms.Form):
     #             raise forms.ValidationError('File types is not allowed')
     #     except Exception as e:
     #         raise forms.ValidationError('Can not identify file type')
-
-
-class LinkEditForm(forms.Form):
-    class Meta:
-        model = Menu
-        fields = '__all__'

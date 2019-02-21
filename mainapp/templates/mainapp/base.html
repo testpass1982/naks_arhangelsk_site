@@ -46,9 +46,9 @@
     crossorigin="anonymous"></script>
 
   <script src="{% static 'js/script.js' %}"></script>
-  {% if user.is_authenticated %}
+  {% comment %} {% if user.is_authenticated %}
   <script src="{% static 'js/links.js' %}"></script>
-  {% endif %}
+  {% endif %} {% endcomment %}
   <script src="{% static 'js/bootstrap.js' %}"></script>
   <script src="{% static 'js/jquery.fancybox.js' %}"></script>
   <script src="{% static 'js/jquery.maskedinput.js' %}"></script>

@@ -95,7 +95,7 @@ class PostAdmin(admin.ModelAdmin):
     # save_on_top = True
     view_on_site = True
 
-    fields = ['id', 'title', 'tags', 'category', 'author', 'short_description', 'text', get_url,
+    fields = ['id', 'title', 'url_code', 'tags', 'category', 'author', 'short_description', 'text', get_url,
               'created_date', 'published_date', 'publish_on_main_page', 'secondery_main', 'publish_on_news_page']
     readonly_fields = ['id', get_url]
     list_display = ['title', 'category',

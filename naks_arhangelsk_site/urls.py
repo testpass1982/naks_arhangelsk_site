@@ -18,6 +18,7 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, re_path, include
 import mainapp.views as mainapp
+from .routers import router
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -34,7 +35,7 @@ urlpatterns = [
     path('messages/', mainapp.messages, name='messages'),
     path('services/', mainapp.services, name="services"),
     path('reestrsp/', mainapp.reestrsp, name='reestrsp'),
-
+    path('api/', include(router.urls)),
 ]
 
 if settings.DEBUG:
