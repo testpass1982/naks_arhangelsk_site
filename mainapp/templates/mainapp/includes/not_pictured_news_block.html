@@ -2,12 +2,12 @@
           <p class="news__naks__tag d-inline-block">
           
           {% for tag in post.tags.all %}
-            {{ tag.name }}          
+            <i class="fas fa-hashtag"></i>{{ tag.name }}          
           {% endfor %}
           
           </p>
           <p class="date__news d-inline-block float-right">{{ post.published_date }}</p>
-          <a href="news-seminar.html#news-seminar">
+          <a href="{% url 'detailview' 'post' post.pk %}#page-top">
             <p class="text__content__news__two">
               {{ post.title }}
             </p>

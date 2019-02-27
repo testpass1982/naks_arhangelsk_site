@@ -1,5 +1,7 @@
 # popov gitignore
 # Created by https://www.gitignore.io
+db.json
+db_from_server_21feb2019/
 
 ### OSX ###
 .DS_Store
