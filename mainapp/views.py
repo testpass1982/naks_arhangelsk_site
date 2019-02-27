@@ -134,8 +134,10 @@ def details(request, pk=None, content=None):
     if content == 'post':
         attached_images = PostPhoto.objects.filter(post__pk=pk)
         attached_documents = Document.objects.filter(post__pk=pk)
-        side_related = Post.objects.all().exclude(
-            id=pk).order_by('-created_date')[:3]
+
+        # side_related = Post.objects.filter(publish_on_news_page=True).exclude(
+        #     id=pk).order_by('-published_date')[:3]
+        side_related = Document.objects.all().order_by('-created_date')[:3]
         # side_related_posts = [dict({'post': post, 'picture': PostPhoto.objects.filter(
         #     post__pk=post.pk).first()}) for post in side_related]
         post_content = {
