@@ -1,4 +1,6 @@
 {% load static %}
+{% load link_holders %}
+
 <!-- footer -->
 <div class="footer__box">
   <div class="container">
@@ -22,11 +24,11 @@
         <div class="menu__footer__text">
           <nav>
             <ul class="menu__footer ">
-              <a href="o-kompaniy.html#o-kompaniy">
-                <li>Центр</li>
+              <a href="{% link_holder 'ABOUT_US' %}">
+                <li>{% title_holder 'ABOUT_US' %}</li>
               </a>
              
-              <a href="kontakti.html#kontakti">
+              <a href="{% url 'contact' %}">
                 <li>Контакты</li>              
               </a>
               <p class="spks__logo"><img src="{% static 'img/spks__logo-01.png' %}"  alt="">
