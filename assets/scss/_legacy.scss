@@ -80,6 +80,11 @@ p {
 /*--------------------- header ---------------------*/
 
 
+.logo_archangelsk{
+    width: 250px;
+    padding: 0px;
+}
+
 .header__block__two {
     padding: 35px 0px 35px 0px;
 }
@@ -177,26 +182,6 @@ p {
     margin-bottom: 20px;
 }
 
-.sasp__logo__gray {
-    @media screen and (max-width: 320px) {
-        width: 223px;
-        height: 79px;
-        display: none;
-    }
-   
-}
-
-.sasp__logo__gray__two {
-    display: none;
-}
-
-.sasp__logo__gray__two {
-    @media screen and (max-width: 320px) {
-        display: block;
-        margin-top: 25px;
-    }
-    
-}
 
 .line__footer__two {
     @media screen and (max-width: 320px) {
@@ -367,35 +352,6 @@ p {
 
 /*--------------------- БГ + информация ---------------------*/
 
-.sasp__logo {
-    margin-bottom: 25px;
-    font-size: 16px;
-
-    @media screen and (max-width: 480px) {
-        width: 300px;
-        height: 85px;
-    }
-
-    @media screen and (max-width: 768px) {
-        width: 300px;
-        height: 85px;
-    }
-
-    @media screen and (max-width: 320px) {
-        width: 300px;
-        height: 85px;
-        display: none;
-    }
-
-}
-
-.sasp__text {
-    font-size: 16px;
-    text-transform: uppercase;
-    font-weight: 500;
-    float: right;
-}
-
 
 .bg-block-01 {
     background: url(../img/background.png) no-repeat;
@@ -536,9 +492,8 @@ p {
     border-bottom: 3px solid rgb(79, 126, 255);
 }
 
-.close__icon__modal{
-    cursor: pointer;
-    max-width: 50px;
+.close_icon{
+    margin-top: -35px;
 }
 
 

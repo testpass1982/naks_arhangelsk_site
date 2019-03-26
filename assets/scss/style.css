@@ -28,6 +28,8 @@ p { margin: 0; }
 .acst:hover { color: #7a8db9; text-decoration: none; }
 
 /*--------------------- header ---------------------*/
+.logo_archangelsk { width: 250px; padding: 0px; }
+
 .header__block__two { padding: 35px 0px 35px 0px; }
 
 .header__number { font-size: 24px; color: #000; font-weight: 550; text-align: right; }
@@ -60,12 +62,6 @@ p { margin: 0; }
 .footer__box { background-color: #3a3a3a; padding: 45px 0px 45px 0px; }
 
 .logo__gray { margin-bottom: 20px; }
-
-@media screen and (max-width: 320px) { .sasp__logo__gray { width: 223px; height: 79px; display: none; } }
-
-.sasp__logo__gray__two { display: none; }
-
-@media screen and (max-width: 320px) { .sasp__logo__gray__two { display: block; margin-top: 25px; } }
 
 @media screen and (max-width: 320px) { .line__footer__two { border-bottom: 1px #9d9d9d solid; width: 100%; } }
 
@@ -126,16 +122,6 @@ p { margin: 0; }
 .button__zayavka__footer:active { background-color: #929191; color: #fff; }
 
 /*--------------------- БГ + информация ---------------------*/
-.sasp__logo { margin-bottom: 25px; font-size: 16px; }
-
-@media screen and (max-width: 480px) { .sasp__logo { width: 300px; height: 85px; } }
-
-@media screen and (max-width: 768px) { .sasp__logo { width: 300px; height: 85px; } }
-
-@media screen and (max-width: 320px) { .sasp__logo { width: 300px; height: 85px; display: none; } }
-
-.sasp__text { font-size: 16px; text-transform: uppercase; font-weight: 500; float: right; }
-
 .bg-block-01 { background: url(../img/background.png) no-repeat; width: 100%; background-size: cover; }
 
 .bg { background: url(../img/gradient.png) no-repeat; background-size: cover; color: #fff; width: 100%; }
@@ -189,7 +175,7 @@ p { margin: 0; }
 
 .head__box__info { background-color: #fff; padding: 45px 35px; margin-bottom: 25px; border-radius: 3px; border-bottom: 3px solid #4f7eff; }
 
-.close__icon__modal { cursor: pointer; max-width: 50px; }
+.close_icon { margin-top: -35px; }
 
 .head__box__text { font-size: 20px; font-weight: 300; }
 
@@ -765,7 +751,7 @@ input[type="search"]::placeholder { color: #fff; }
 
 .modal-content .custom-control-input:checked ~ .custom-control-label::before { color: #3f3f3f; background-color: #3f3f3f; }
 
-.modal-header { position: relative; background-color: #465f92; display: block; border-radius: 0; }
+.modal-header { position: relative; background-color: #6f7786; display: block; border-radius: 0; }
 
 .custom-control-label::after { cursor: pointer; }
 
@@ -781,7 +767,7 @@ input ~ label[for="soglasie"] { width: 100%; font-size: 16px; margin: 25px 0px 0
 
 input ~ label[for="sogl"] { width: 100%; font-size: 16px; margin: 10px 0px 0px 10px; padding: 0px; }
 
-.button__to__send_zayavka__formmodal { background-color: #465f92; border: none; color: #fff; font-size: 16px; border-radius: 3px; cursor: pointer; padding: 10px; }
+.button__to__send_zayavka__formmodal { background-color: #6f7786; border: none; color: #fff; font-size: 16px; border-radius: 3px; cursor: pointer; padding: 10px; }
 
 .button__to__send_zayavka__formmodal:hover { background-color: #3e588b; }
 
