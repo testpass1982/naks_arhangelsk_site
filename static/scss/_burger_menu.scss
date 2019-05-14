@@ -1,0 +1,152 @@
+// Меню
+.menu__background {
+    background-color: #2e3f62;
+    padding: 15px 0px 15px 0px;
+}
+    
+.navbar{
+font-size: 16px;
+color: #fff;
+
+}
+
+.menu__navbar ul {
+    color: #fff;
+    font-size: 16px;      
+    justify-content: space-between;
+    @media screen and (max-width: 992px) {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+}
+
+.menu__navbar .navbar {
+    padding: 0;
+}
+
+.menu__navbar .navbar li {
+    cursor: pointer;
+}
+
+
+.menu__navbar .navbar .nav-item .nav-link {
+    padding: 0;
+}
+
+.menu__navbar .navbar-expand-lg .navbar-nav .nav-link {
+    // padding: 0;
+    margin-right: 35px;
+    text-transform: uppercase;
+}
+
+.menu__navbar .navbar .nav-item .nav__link__two {
+    margin-right: 35px;
+    text-transform: uppercase;
+
+    @media screen and (max-width: 992px) {
+        padding: 0px 0px 15px;
+        font-weight: 200;        
+    }
+}
+
+.navbar-collapse{
+    @media screen and (max-width: 992px) {
+       line-height: 2;       
+    }
+    @media screen and (max-width: 320px) {
+       line-height: 2;       
+    }
+}
+
+.navbar-dark .navbar-nav .nav-link .navbar-dark .navbar-nav .nav-link:hover {
+    color: rgb(255, 255, 255);
+}
+
+.dropdown-menu {
+
+    margin-top: 22px;
+    border-radius: 0px;
+    color: #fff;
+    box-shadow: 0 2px 18px rgba(0, 0, 0, 0.09);
+    line-height: 2;
+    border: none;
+
+    @media screen and (max-width: 320px) {
+        font-size: 12px;
+        color: #fff;
+    }
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+    background-color: #4b505c;
+}
+
+.navbar-dark .navbar-toggler {
+    border-color: #fff;
+}
+
+.navbar-toggler{
+    padding: 3px 10px;
+}
+
+// Конец меню
+
+// Форма поиска
+.form-control {
+    background-color: transparent;
+    float: right;
+}
+
+.form-inline{
+	@media screen and (max-width: 320px) {
+        width: 75%;
+    }
+}
+
+.form-control:focus {
+    color: #fff;
+    background-color: transparent;
+    border-color: #ffffff;
+    outline: 0;
+    box-shadow: none;
+
+}
+
+input[type="search"]::-webkit-input-placeholder {
+    color: #fff;
+}
+
+input[type="search"]:-ms-input-placeholder {
+    color: #fff;
+}
+
+input[type="search"]::-ms-input-placeholder {
+    color: #fff;
+}
+
+input[type="search"]::placeholder {
+    color: #fff;
+}
+
+.form-control:focus::-webkit-input-placeholder {
+    color: transparent
+}
+
+.form-control:focus::-moz-placeholder {
+    color: transparent
+}
+
+.form-control:focus:-moz-placeholder {
+    color: transparent
+}
+
+.form-control:focus:-ms-input-placeholder {
+    color: transparent
+}
+
+.input__group{
+    @media screen and (max-width: 320px) {
+       text-align: left;
+    } 
+}

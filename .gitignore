@@ -92,6 +92,7 @@ local_settings.py
 
 ### Database ###
 db.sqlite3
+media/
 #*.jpg
 #*.png
 *.pdf
