@@ -71,12 +71,12 @@ def index(request):
     content = {
         'title': title,
         'pictured_posts': pictured_posts,
-        'not_pictured_posts': not_pictured_posts,
-        'articles': main_page_articles,
-        'docs': main_page_documents,
-        'send_message_form': SendMessageForm(),
-        'subscribe_form': SubscribeForm(),
-        'ask_question_form': AskQuestionForm(),
+        # 'not_pictured_posts': not_pictured_posts,
+        # 'articles': main_page_articles,
+        # 'docs': main_page_documents,
+        # 'send_message_form': SendMessageForm(),
+        # 'subscribe_form': SubscribeForm(),
+        # 'ask_question_form': AskQuestionForm(),
     }
 
     return render(request, 'mainapp/index.html', content)

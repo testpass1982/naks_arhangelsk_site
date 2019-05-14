@@ -25,7 +25,7 @@ SECRET_KEY = 'x-uk$+yb93o*p*=3xic%p0zp5slprn8u)i@d((%3ltr=#$tjf!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'ckeditor_uploader',
     'sass_processor',
     'rest_framework',
+    'django_jenkins',
 ]
 
 MIDDLEWARE = [
@@ -209,3 +210,16 @@ DJANGORESIZED_DEFAULT_KEEP_META = True
 DJANGORESIZED_DEFAULT_FORCE_FORMAT = 'JPEG'
 DJANGORESIZED_DEFAULT_FORMAT_EXTENSIONS = {'JPEG': ".jpg"}
 DJANGORESIZED_DEFAULT_NORMALIZE_ROTATION = True
+
+####################################
+###  JENKINS AUTOMAT CONFIGURATION##
+####################################
+
+PROJECT_APPS = (
+ 'mainapp'
+)
+
+JENKINS_TASKS = (
+ 'django_jenkins.tasks.run_pep8',
+ 'django_jenkins.tasks.run_pyflakes',
+)
