@@ -9,20 +9,23 @@
       {% for fb in feedbacks %}
       <div class="swiper-slide shadow">
 
-      <div class="slide-wrapper d-flex align-items-center">
-      <div class="row">
+      <div class="slide-wrapper">
+      <div class="row my-3 align-items-center">
         <div class="col-5">
           <img class="img-fluid feedback_logo" src="{{ fb.logo.url }}" alt="">
         </div>
         <div class="col-7">
-          <p class="h5">
+          <p class="text text-sm">
             {{ fb.company }}
-          </p>
-          <p>
-            {{ fb.text }}
           </p>
         </div>
       </div>
+            <div class="p-3 text-left">
+              <small class="text text-secondary">
+                {{ fb.text }}
+              </small>
+            </div>
+
       </div>
 
       </div>

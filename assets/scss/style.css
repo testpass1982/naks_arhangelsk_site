@@ -898,7 +898,7 @@ button:focus { outline: none; }
 
 .feedback_logo { text-align: center; }
 
-.slide-wrapper { height: 150px; }
+.slide-wrapper { min-height: 150px; }
 
 .back_to_home_page { background: transparent; border: none; outline: none; padding: 0px; margin-top: 15px; }
 
