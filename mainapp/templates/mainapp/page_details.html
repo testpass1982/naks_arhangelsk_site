@@ -13,7 +13,7 @@
         <div class="line__section"></div>
       </div>
       <div class="col-xl-6">
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        {% comment %} <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
           {% for image in images %}
             <div class="carousel-item {% if forloop.first %}active{% endif %}">
@@ -29,7 +29,7 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
           </a>
-        </div>
+        </div> {% endcomment %}
             <div class="box__news__content__inside">
                 <p class="text__content__news__header">
                   {{ post.title }}
