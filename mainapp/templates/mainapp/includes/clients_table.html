@@ -1,0 +1,24 @@
+
+    <div class="container">
+        <div class="box__uslug">
+          <div class="row align-items-stretch">
+
+            {% for cl in clients %}
+
+            <div class="col-6 col-xl-3">
+              <div class="block__uslug__one">
+                <a href="javascript: null;">
+                  <ul class="specialist__block">
+                    <img class="img-fluid d-block mx-auto" src="{{ cl.logo.url }}" class="mask__1" alt="">
+                    <li class="py-2 text-center">
+                      {{ cl.company }}
+                    </li>
+                  </ul>
+                </a>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+
+        </div>
+    </div>

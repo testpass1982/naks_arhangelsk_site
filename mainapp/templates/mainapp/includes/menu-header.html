@@ -20,7 +20,7 @@
               <div class="collapse navbar-collapse" id="basicExampleNav">
 
                 <!-- Links -->
-                <ul class="navbar-nav mr-auto">
+                <ul class="navbar-nav m-auto">
                   <li class="nav-item active">
                     <a class="nav-link" href="{% url 'index' %}">Главная
                       <span class="sr-only">(current)</span>
@@ -34,7 +34,7 @@
                     <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
                       <a class="dropdown-item" href="{{ page_urls.ABOUT_US.url }}#page-top">{{ page_urls.ABOUT_US.title }}</a>
                       <a class="dropdown-item" href="{{ page_urls.INFO.url }}#page-top">{{ page_urls.INFO.title }}</a>
-                      <a class="dropdown-item" href="{{ page_urls.OBLD.url }}#page-top">{{ page_urls.OBLD.title }}</a>
+                      {% comment %} <a class="dropdown-item" href="{{ page_urls.OBLD.url }}#page-top">{{ page_urls.OBLD.title }}</a> {% endcomment %}
                     </div>
                   </li>
                   <li class="nav-item dropdown">
@@ -47,6 +47,14 @@
                       <a class="dropdown-item" href="{{ page_urls.COK.url }}#page-top">{{ page_urls.COK.title }}</a>
 
 
+                    </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav__link__two dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">Реестры</a>
+                    <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" href="{{ page_urls.REESTRSP.url }}">{{ page_urls.REESTRSP.title }}</a>
+                      <a class="dropdown-item" href="{{ page_urls.REESTRST.url }}">{{ page_urls.REESTRST.title }}</a>
                     </div>
                   </li>
                   <li class="nav-item active">

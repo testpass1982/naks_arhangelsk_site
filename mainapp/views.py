@@ -5,9 +5,7 @@ from django.core.exceptions import ValidationError
 # from django.contrib import messages
 from django.utils import timezone
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-from .models import Post, PostPhoto, Tag, Category, Document, Article, Message, Contact
-from .models import Registry, Menu
-from .models import Staff
+from .models import *
 from .forms import PostForm, ArticleForm, DocumentForm
 from .forms import SendMessageForm, SubscribeForm, AskQuestionForm, DocumentSearchForm, SearchRegistryForm
 from .adapters import MessageModelAdapter
@@ -65,18 +63,18 @@ def index(request):
 
     main_page_links = Menu.objects.all()
 
+    main_page_feedback_slides = Feedback.objects.all()
+
+    main_page_clients = Client.objects.all()
+
     # print(request.resolver_match)
     # print(request.resolver_match.url_name)
 
     content = {
         'title': title,
         'pictured_posts': pictured_posts,
-        # 'not_pictured_posts': not_pictured_posts,
-        # 'articles': main_page_articles,
-        # 'docs': main_page_documents,
-        # 'send_message_form': SendMessageForm(),
-        # 'subscribe_form': SubscribeForm(),
-        # 'ask_question_form': AskQuestionForm(),
+        'feedbacks': main_page_feedback_slides,
+        'clients': main_page_clients
     }
 
     return render(request, 'mainapp/index.html', content)
@@ -129,24 +127,23 @@ def details(request, pk=None, content=None):
         'article': Article
     }
     obj = get_object_or_404(content_select[content], pk=pk)
-    print(obj)
+
+    attestats = Attestat.objects.all().order_by("number")
+
     common_content = {'title': obj.title}
     if content == 'post':
         attached_images = PostPhoto.objects.filter(post__pk=pk)
         attached_documents = Document.objects.filter(post__pk=pk)
 
-        # side_related = Post.objects.filter(publish_on_news_page=True).exclude(
-        #     id=pk).order_by('-published_date')[:3]
         side_related = Document.objects.all().order_by('-created_date')[:3]
-        # side_related_posts = [dict({'post': post, 'picture': PostPhoto.objects.filter(
-        #     post__pk=post.pk).first()}) for post in side_related]
         post_content = {
             'post': obj,
             'images': attached_images,
             'documents': attached_documents,
             'side_related': side_related,
             'bottom_related': Article.objects.all().order_by(
-                '-created_date')[:3]
+                '-created_date')[:3],
+            "attestats": attestats if attestats.count() > 0 else None
         }
         # print('SIDE_RELATED', post_content['side_related_posts'])
     if content == 'article':
@@ -278,27 +275,9 @@ def documents(request):
                 print('SEARCH_RESULT', search_result)
                 search_result_content['search_result'] = search_result
     all_documents = Document.objects.all().order_by('created_date')
-    # accreditation_list = Document.objects.filter(
-    #     tags__in=Tag.objects.filter(name='Аккредитация САСв'))
-    # cok_accreditation_list = Document.objects.filter(
-    #     tags__in=Tag.objects.filter(name='Допуск ЦОК'))
-    # os_doc_list = Document.objects.filter(
-    #     tags__in=Tag.objects.filter(name='Оценочное средство'))
-    # norm_doc_list = Document.objects.filter(
-    #     tags__in=Tag.objects.filter(name='Нормативный документ'))
-    # sogl_doc_list = Document.objects.filter(
-    #     tags__in=Tag.objects.filter(name='Соглашение'))
-    # print(accreditation_list)
-    # print(cok_accreditation_list)
-    # print(os_doc_list)
 
     content = {
         'title': 'Документы',
-        # 'accreditation_list': accreditation_list,
-        # 'cok_accreditation_list': cok_accreditation_list,
-        # 'os_doc_list': os_doc_list,
-        # 'norm_doc_list': norm_doc_list,
-        # 'sogl_doc_list': sogl_doc_list,
         'documents': all_documents,
         'search_form': search_form
     }

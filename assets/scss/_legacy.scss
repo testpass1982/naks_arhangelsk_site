@@ -62,7 +62,7 @@ p {
         box-shadow: none;
         outline: none;
     }
-   
+
 }
 
 .acst {
@@ -93,12 +93,10 @@ p {
     font-size: 24px;
     color: #000;
     font-weight: 550;
-    text-align: right;
 
     @media screen and (max-width: 1510px) {
-        margin-top: 15px;
+
         font-size: 18px;
-        float: left;
     }
 }
 
@@ -106,11 +104,6 @@ p {
     font-size: 14px;
     color: #000;
     font-weight: 400;
-    text-align: right;
-
-    @media screen and (max-width: 1510px) {
-        float: left;
-    }
 
     @media screen and (max-width: 380px) {
         margin-bottom: 15px;
@@ -241,9 +234,9 @@ p {
     a{
         color: #fff;
         &:hover{
-            color: #d4d4d4; 
+            color: #d4d4d4;
         }
-    } 
+    }
 }
 
 .basement__footer {
@@ -520,7 +513,7 @@ p {
 }
 
 .icon__info{
-    margin-top: -26px;    
+    margin-top: -26px;
 }
 
 .fancybox-content{
@@ -618,7 +611,7 @@ color: #505050;
 // Новости
 
 .box__news__content__main {
-    padding: 25px;   
+    padding: 25px;
     margin-bottom: 30px;
 }
 
@@ -763,7 +756,7 @@ border-radius: 0px;
     font-size: 16px;
     color: #000;
     font-weight: 400;
-    border-radius: 3px;   
+    border-radius: 3px;
     padding: 10px 15px;
     background-color: #ffffff;
     border: 1px solid #f8f8f8;
@@ -853,8 +846,8 @@ border-radius: 0px;
     overflow-y: scroll; /* Добавляем полосы прокрутки */
     width: 100%; /* Ширина блока */
     height: 900px; /* Высота блока */
-    padding: 5px; /* Поля вокруг текста */ 
-    position: relative;       
+    padding: 5px; /* Поля вокруг текста */
+    position: relative;
 }
 
 .text__link {
@@ -1224,7 +1217,7 @@ border-radius: 0px;
 .news__naks__tag__inside {
     font-size: 14px;
     color: #1a2a4a;
-    margin-bottom: 5px;   
+    margin-bottom: 5px;
    a{
     color: #1a2a4a;
    }
@@ -1232,8 +1225,8 @@ border-radius: 0px;
 
 .date__news__inside {
     font-size: 14px;
-    color: #999999;   
-    margin-bottom: 5px;  
+    color: #999999;
+    margin-bottom: 5px;
 }
 
 
@@ -1359,7 +1352,7 @@ border-radius: 0px;
 
 .soglashenie__button {
     background-color: transparent;
-    border: none;   
+    border: none;
     padding: 0;
     margin-bottom: 25px;
 }
@@ -1755,7 +1748,7 @@ border-radius: 0px;
     font-size: 16px;
     font-weight: 500;
     text-decoration: underline;
-      
+
 }
 
 .imglist {
@@ -1815,7 +1808,7 @@ border-radius: 0px;
     font-size: 16px;
     font-weight: 400;
     color: #000;
-    margin-bottom: 10px;   
+    margin-bottom: 10px;
 }
 
 .name__spisok__zayavki{
@@ -1966,7 +1959,7 @@ margin-left: 15px;
 .header__name__standart__line {
     font-size: 14px;
     color: #2e3e60;
-    font-weight: 450;  
+    font-weight: 450;
 
     @media screen and (max-width: 575px) {
         margin-bottom: 10px;
@@ -1986,7 +1979,7 @@ margin-left: 15px;
 
   .file-upload {
     flex: 0 0 8em;
-    position: relative;    
+    position: relative;
     p {
         border: 1px solid rgb(145, 145, 145);
       border-radius: 0.25em;
@@ -1995,7 +1988,7 @@ margin-left: 15px;
       font-size: 16px;
       width: 200px;
       padding: 10px;
-      transition: background-color 100ms;     
+      transition: background-color 100ms;
     }
     + p {
       color: #ccc;
@@ -2008,10 +2001,10 @@ margin-left: 15px;
       color: rgb(255, 93, 93);
       @media screen and (max-width: 320px) {
         margin-left: 0px;
-    }    
+    }
       &.added {
         color: rgb(0, 81, 255);
-        
+
       }
     }
   }

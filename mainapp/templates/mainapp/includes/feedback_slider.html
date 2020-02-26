@@ -1,0 +1,37 @@
+
+  <div class="section__header d-inline-block">Отзывы клиентов</div>
+  <div class="line__section"></div>
+
+  <!-- Swiper -->
+
+  <div class="swiper-container mx-auto d-none d-md-block">
+    <div class="swiper-wrapper d-flex align-items-stretch pb-5">
+      {% for fb in feedbacks %}
+      <div class="swiper-slide shadow">
+
+      <div class="slide-wrapper d-flex align-items-center">
+      <div class="row">
+        <div class="col-5">
+          <img class="img-fluid feedback_logo" src="{{ fb.logo.url }}" alt="">
+        </div>
+        <div class="col-7">
+          <p class="h5">
+            {{ fb.company }}
+          </p>
+          <p>
+            {{ fb.text }}
+          </p>
+        </div>
+      </div>
+      </div>
+
+      </div>
+      {% endfor %}
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+
+
+
+

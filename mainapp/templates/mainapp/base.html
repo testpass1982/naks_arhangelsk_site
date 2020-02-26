@@ -21,6 +21,10 @@
   <link rel="stylesheet" href="{% static 'css/animate.css' %}">
   <link rel="stylesheet" href="{% static 'css/jquery.fancybox.min.css' %}">
 
+  <!-- swiper  -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+
 
   <!-- HEADER -->
 </head>
@@ -46,15 +50,20 @@
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/swiper/js/swiper.js"></script>
+  <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
 
   <script src="{% static 'js/script.js' %}"></script>
   {% comment %} {% if user.is_authenticated %}
   <script src="{% static 'js/links.js' %}"></script>
   {% endif %} {% endcomment %}
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
   <script src="{% static 'js/bootstrap.js' %}"></script>
   <script src="{% static 'js/jquery.fancybox.js' %}"></script>
   <script src="{% static 'js/jquery.maskedinput.js' %}"></script>
   <script src="{% static 'js/jquery.maskedinput.min.js' %}"></script>
+  {% comment %} <script src="{% static 'js/flickity.pkgd.min.js' %}"></script> {% endcomment %}
 
 
 </body>

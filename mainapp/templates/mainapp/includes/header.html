@@ -3,17 +3,16 @@
 
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-xs-12 col-sm-6 col-lg-6">
-          <div class="head__text__adres">
-            <img src="{% static 'img/here.png' %}" alt=""> г. Архангельск, ул. Гагарина 43
+        <div class="col-sm-6">
+          {% comment %} <div class="head__text__adres">
+            <img src="{% static 'img/here.png' %}" alt=""> {{ profile.org_address }}
             <p class="adres__on__map">
-                <a data-fancybox="" data-options="" title="Открыть карту" href="https://www.google.ru/maps/place/%D1%83%D0%BB.+%D0%93%D0%B0%D0%B3%D0%B0%D1%80%D0%B8%D0%BD%D0%B0,+43,+%D0%90%D1%80%D1%85%D0%B0%D0%BD%D0%B3%D0%B5%D0%BB%D1%8C%D1%81%D0%BA,+%D0%90%D1%80%D1%85%D0%B0%D0%BD%D0%B3%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%B0%D1%8F+%D0%BE%D0%B1%D0%BB.,+163045/@64.5561194,40.5538834,17z/data=!4m13!1m7!3m6!1s0x441836a3dd434105:0x146c579e18134e75!2z0YPQuy4g0JPQsNCz0LDRgNC40L3QsCwgNDMsINCQ0YDRhdCw0L3Qs9C10LvRjNGB0LosINCQ0YDRhdCw0L3Qs9C10LvRjNGB0LrQsNGPINC-0LHQuy4sIDE2MzA0NQ!3b1!8m2!3d64.5561171!4d40.5560721!3m4!1s0x441836a3dd434105:0x146c579e18134e75!8m2!3d64.5561171!4d40.5560721">
-                Посмотреть на карте</a>
+                <a href="{% url 'contact' %}" target="_blank" class="href">На карте</a>
             </p>
-          </div>
-          
+          </div> {% endcomment %}
+
         </div>
-        <div class="col-xs-12 col-sm-6 col-lg-6">
+        <div class="col-sm-6">
           <div class="head__text__numbercok__two d-inline-block float-right">
             ООО  «НАКС Архангельск» в реестрах НАКС:
             <div class="dropdown d-inline-block">
@@ -26,50 +25,74 @@
                     <a class="dropdown-item" href="#">Something else here</a>
                   </div>
               </div>
-              
+
           </div>
         </div>
       </div>
     </div>
   </header>
-  
-  
+
+
   <div class="header__block__two">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-xs-12 col-md-12 col-lg-6 col-xl-6">
+        <div class="col-sm-6 col-xl-3">
           <a href="{% url 'index' %}">
               <div class="logo__blue__header">
                  <img src="{% static 'img/logo_archangelsk.png' %}" class="logo_archangelsk" alt="">
                 </div>
           </a>
-        </div>    
-        <div class="col-xs-6 col-md-6 col-lg-4 col-lg-2 col-xl-2">
+        </div>
+        <div class="col-sm-6 col-xl-3">
+                    <div class="my-3 my-lg-0">
+                      <div class="flex-fill d-flex justify-content-sm-between justify-content-lg-around">
+                        <div class="logo mr-1" data-toggle="tooltip" data-placement="right"
+                            title="Премия правительства РФ в области качества">
+                            <a href="http://naks.ru" target="_blank">
+                                <img class="img-fluid" src="{% static '/img/logo-round-quality.png' %}"
+                                    alt=""></a></div>
+                        <div class="logo mr-1" data-toggle="tooltip" data-placement="right"
+                            title="Премия СНГ в области качества"><a href="http://naks.ru" target="_blank">
+                            <img class="img-fluid" src="{% static '/img/logo-round-sng.png' %}" alt=""></a></div>
+                        <div class="logo mr-1" data-toggle="tooltip" data-placement="right"
+                            title="Международный институт сварки"><a href="http://naks.ru" target="_blank">
+                            <img class="img-fluid" src="{% static '/img/logo-round-iiw.png' %}" alt=""></a></div>
+                    </div>
+                    </div>
+        </div>
+        <div class="col-sm-6 col-xl-3">
           <div class="header__number">
-            <p>(8182) 60-89-39</p>
-            <p class="header__mail"><a href="mailto:naksarh@mail.ru" title="Написать письмо">naksarh@mail.ru</a></p>
-                 
-          </div>
-        </div>     
-  
-        <div class="col-xl-2">
-          <div class="header__buttons-container">
-            <button class="button__zayavka">
-              <a href="#" data-toggle="modal" data-target="#modal-statement">
-                Оставить заявку</a>
-            </button>            
+            <p>{{ profile.org_main_phone }}</p>
+            <div class="header__mail">
+              <a href="mailto:{{ profile.org_email }}" title="Написать письмо">{{ profile.org_email }}</a>
+            </div>
+            <div class="header__mail">
+              <img src="{% static 'img/here.png' %}" alt="">
+              <div class="adres__on__map d-inline-block">
+                {{ profile.org_address }}
+              </div>
+                <a class="adres__on__map d-block" href="{% url 'contact' %}" target="_blank" class="href">На карте</a>
+            </div>
           </div>
         </div>
-        <div class="col-xl-2">
+
+        <div class="col-sm-6 col-xl-3">
+          <div class="header__buttons-container mb-3">
+            <button class="button__zayavka">
+              {% comment %} <a href="#" data-toggle="modal" data-target="#modal-statement"> {% endcomment %}
+              <a href="https://ac.naks.ru/" target="_blank">
+                Оставить заявку</a>
+            </button>
+          </div>
+
           <div class="header__buttons-container">
             <button class="button__system__edo">
               <a href="https://ac.naks.ru/" target="_blank">
                           Войти в систему ЭДО</a>
-            </button>          
+            </button>
           </div>
         </div>
       </div>
     </div>
   </div>
   </div>
-  

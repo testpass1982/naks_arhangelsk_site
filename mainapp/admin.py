@@ -3,8 +3,7 @@ from django.urls import reverse
 from django.utils.encoding import force_text
 from django.utils.html import format_html
 
-from .models import Post, Category, Tag, Document, PostPhoto, Article, Message, Contact
-from .models import Staff, Registry, Menu
+from .models import *
 # from .models import WeldData
 # from .domain_model import WeldOrg, Welder
 # Register your models here.
@@ -96,9 +95,9 @@ class PostAdmin(admin.ModelAdmin):
     view_on_site = True
 
     fields = ['id', 'title', 'url_code', 'tags', 'category', 'author', 'short_description', 'text', get_url,
-              'created_date', 'published_date', 'publish_on_main_page', 'secondery_main', 'publish_on_news_page']
+              'created_date', 'published_date', 'publish_on_main_page', 'secondery_main', 'publish_on_news_page', 'att_block_include']
     readonly_fields = ['id', get_url]
-    list_display = ['title', 'category',
+    list_display = ['title', 'url_code',
                     'created_date', 'publish_on_main_page', 'publish_on_news_page']
     inlines = [PostPhotoInline, DocumentInline]
 
@@ -125,12 +124,14 @@ class MessageAdmin(admin.ModelAdmin):
 class MenuAdmin(admin.ModelAdmin):
     list_display = ['title', 'url_code', 'url']
 
+admin.site.register(Attestat)
+admin.site.register(Feedback)
+admin.site.register(Client)
+admin.site.register(Profile)
 admin.site.register(Tag)
 admin.site.register(Category)
 admin.site.register(Contact)
 admin.site.register(Staff)
 admin.site.register(Registry)
-#another_test
-#test
 # admin.site.register(WeldOrg)
 # admin.site.register(Welder)

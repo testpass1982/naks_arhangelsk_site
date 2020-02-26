@@ -1,15 +1,15 @@
         <div class="box__news__content__two">
           <p class="news__naks__tag d-inline-block">
-          
-          {% for tag in post.tags.all %}
-            <i class="fas fa-hashtag"></i>{{ tag.name }}          
+
+          {% for tag in document.tags.all %}
+            <i class="fas fa-hashtag"></i>{{ tag.name }}
           {% endfor %}
-          
+
           </p>
           <p class="date__news d-inline-block float-right">{{ document.created_date }}</p>
           <a href="{{ document.document.url }}" target="_blank">
             <p class="text__content__news__two">
-              {{ post.title }}
+              {{ document.title }}
             </p>
           </a>
         </div>

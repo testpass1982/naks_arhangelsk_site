@@ -102,4 +102,5 @@ static/ckeditor/
 static/admin/
 *.sqlite3
 node_modules/
+**migration**
 

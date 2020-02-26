@@ -7,7 +7,7 @@
       </button>
 
     <div class="row">
-      <div class="col-xl-2">       
+      <div class="col-xl-2">
         <div class="section__header d-inline-block">Контакты</div>
         <div class="line__section"></div>
       </div>
@@ -17,13 +17,13 @@
              Телефон
          </div>
          <p class="tel">
-            (8182) 60-89-39
+            {{ profile.org_main_phone }}
           </p>
           <div class="header__tag">
             Адрес
         </div>
         <p class="mail">
-          г. Архангельск, ул. Гагарина 43
+          {{ profile.org_address }}
          </p>
       </div>
       <div class="col-xl-2">
@@ -31,7 +31,7 @@
              Почта
          </div>
          <p class="mail">
-          <a href="mailto:?subject=Написать письмо" title="Написать письмо">naksarh@mail.ru</a>
+          <a href="mailto:?subject=Написать письмо" title="Написать письмо">{{ profile.org_email }}</a>
           </p>
       </div>
 
@@ -40,11 +40,11 @@
              Наше местоположение
          </div>
          <div class="ya__map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1714.1399805185724!2d40.555524911917104!3d64.55600877427396!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x441836a3dd434105%3A0x146c579e18134e75!2z0YPQuy4g0JPQsNCz0LDRgNC40L3QsCwgNDMsINCQ0YDRhdCw0L3Qs9C10LvRjNGB0LosINCQ0YDRhdCw0L3Qs9C10LvRjNGB0LrQsNGPINC-0LHQuy4sIDE2MzA0NQ!5e0!3m2!1sru!2sru!4v1553585365621" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <script src="{{ profile.org_address_map_link }}"></script>
          </div>
-       
+
       </div>
-    
+
     </div>
 
     <button class="back__to__main">

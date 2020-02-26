@@ -3,8 +3,12 @@ window.onload = function() {
 $( ".btn" ).click(function() {
     $('.search, btn').toggleClass('open');
  });
- 
-//  
+
+ $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+
+//
 
 $(document).ready(function() {
    $('#pop-up').click(function() {
@@ -35,7 +39,7 @@ function check() {
         $(".sb-search").addClass("sb-search-open");
       }
     });
-    
+
     $(".sb-search-submit").click(function(){
       if ($(".sb-search").hasClass("sb-search-open") && $.trim($(".sb-search-input").val()).length==0) {
         event.preventDefault();
@@ -46,7 +50,7 @@ function check() {
 
 
 // Бургер меню
- 
+
 $(document).ready(function () {
   $('.animated-icon1,.animated-icon3,.animated-icon4').click(function () {
     $(this).toggleClass('open');
@@ -88,7 +92,7 @@ $('.sort').click(function () {
 $('li', '.items').click(function (){
   var checks = $('[type="checkbox"]', '.checks');
   var item = $(this);
-  
+
   if(item.data('selected') == '0') {
     item.data('selected', '1');
     item.addClass('selected');
@@ -96,20 +100,28 @@ $('li', '.items').click(function (){
     item.data('selected', '0');
     item.removeClass('selected');
   }
-  
+
   checks.filter('[data-guid="'+item.data('guid')+'"]').prop('checked', item.data('selected') == '1');
 });
 
-$(document).on('change', '.file-input-field', function() {  
-  var $value = $(this).parent().next();  
+$(document).on('change', '.file-input-field', function() {
+  var $value = $(this).parent().next();
   $value.addClass("added").text($(this).val().replace(/C:\\fakepath\\/i, ''));
 });
 $("#phone").mask("+8 (999) 999 - 99 - 99",{completed:function(){alert("Да, этой мой номер");}});
   $("#phone2").mask("+8 (999) 999 - 99 - 99",{completed:function(){alert("Да, этой мой номер");}});
 };
 
-// require(["popper"], function(popper) {
-//   window.Popper = popper;
-//   require(["bootstrap"]);
-// });
+// previous
+//-- Swiper JS -->
+
+//-- Initialize Swiper -->
+  var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
 

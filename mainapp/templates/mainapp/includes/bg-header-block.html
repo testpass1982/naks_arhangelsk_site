@@ -13,21 +13,18 @@
                            </a>
 
                         <div class="about__organization__text">
-                            <p>Аттестационный центр <br> <strong>НАКС Архангельск</strong> </p>
+                            <strong>{{ profile.org_short_name }}</strong>
                         </div>
 
                         <div class="about__organization__text__two">
-                            <p>Общество с ограниченной ответственностью Аттестационный центр «НАКС Архангельск» - является
-                                членом СРО Ассоциация «Национальное Агентство Контроля Сварки» Системы Аттестации Сварочного
-                                производства (САСв) Ростехнадзора и оказывает услуги по аттестации сварщиков и
-                                специалистов сварочного производства и оценки квалификации в области сварки и родственных процессов.
+                            <p>{{ profile.org_intro }}
                             </p>
                         </div>
 
-                        <div class="button__zayavka__online">
+                        {% comment %} <div class="button__zayavka__online">
                             <a href="#" class="button__zayavka__text" data-toggle="modal" data-target="#modal-statement">
                                 Подать заявку онлайн</a>
-                        </div>
+                        </div> {% endcomment %}
                     </div>
                     <div class="col-xl-6">
                         <p class="head__information">Информация</p>

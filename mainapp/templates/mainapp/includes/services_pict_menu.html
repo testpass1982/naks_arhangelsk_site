@@ -1,0 +1,87 @@
+{% load static %}{% load link_holders %}
+{% autoescape off %}
+    <div class="box__uslug">
+      <div class="row">
+        <div class="col-sm-4 col-xl-2">
+          <div class="block__uslug__one">
+            <a href="{% link_holder 'ATT_SP_SV' %}#page-top">
+              <ul class="specialist__block">
+                <img src="{% static 'img/icon-01.png' %}" class="mask__1" alt="">
+                <li>
+                  {% title_holder 'ATT_SP_SV' %}
+                </li>
+              </ul>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-sm-4 col-xl-2">
+          <div class="block__uslug__one">
+            <a href="{% link_holder 'OK' %}#page-top">
+              <ul class="specialist__block">
+                <img src="{% static 'img/icon-02.png' %}" class="mask__1" alt="">
+                <li>
+                  {% title_holder 'OK' %}
+                </li>
+              </ul>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-sm-4 col-xl-2">
+          <div class="block__uslug__one">
+            <a href="{% link_holder 'NK' %}#page-top">
+              <ul class="specialist__block">
+                <img src="{% static 'img/icon-06.png' %}" class="mask__1" alt="">
+                <li>
+                  {% title_holder 'NK' %}
+                </li>
+              </ul>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-sm-4 col-xl-2">
+          <div class="block__uslug__one">
+            <a href="{% link_holder 'RK' %}#page-top">
+              <ul class="specialist__block">
+                <img src="{% static 'img/icon-09.png' %}" class="mask__1" alt="">
+                <li>
+                  {% title_holder 'RK' %}
+                </li>
+              </ul>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-sm-4 col-xl-2">
+          <div class="block__uslug__one">
+            <a href="{% link_holder 'SPECPOD' %}#page-top">
+              <ul class="specialist__block">
+                <img src="{% static 'img/icon-05.png' %}" class="mask__1" alt="">
+                <li>
+                {% title_holder 'SPECPOD' %}
+                </li>
+              </ul>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-sm-4 col-xl-2">
+          <div class="block__uslug__one">
+            <a href="{% link_holder 'ATTST' %}#page-top">
+              <ul class="specialist__block">
+                <img src="{% static 'img/icon-07.png' %}" class="mask__1" alt="">
+                <li>{% title_holder 'ATTST' %}</li>
+              </ul>
+            </a>
+          </div>
+        </div>
+
+
+
+      </div>
+
+    </div>
+
+{% endautoescape %}

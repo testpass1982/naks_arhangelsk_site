@@ -41,8 +41,7 @@ INSTALLED_APPS = [
     'ckeditor',
     'ckeditor_uploader',
     'sass_processor',
-    'rest_framework',
-    'django_jenkins',
+    'stdimage',
 ]
 
 MIDDLEWARE = [
@@ -69,6 +68,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'mainapp.context_processors.menu_urls',
+                'mainapp.context_processors.profile_chunks',
             ],
         },
     },
@@ -126,16 +126,17 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/static_root/'
 SASS_PROCESSOR_ENABLED = True
 SASS_PROCESSOR_AUTO_INCLUDE = False
 SASS_PROCESSOR_INCLUDE_FILE_PATTERN = r'^.+\.scss$'
 SASS_OUTPUT_STYLE = 'compact'
 
-SASS_PRECISION = 8
+SASS_PRECISION = 10
 SASS_ROOT = os.path.join(BASE_DIR, 'assets')
 SASS_PROCESSOR_ROOT = SASS_ROOT
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),

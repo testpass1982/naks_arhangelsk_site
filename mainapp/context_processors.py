@@ -1,4 +1,10 @@
-from .models import Menu
+from .models import Menu, Profile
+
+
+def profile_chunks(request):
+    profile = Profile.objects.first()
+    return {'profile': profile}
+
 
 def menu_urls(request):
     # print('...menu_urls context_processors works...')

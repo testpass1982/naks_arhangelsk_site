@@ -1,0 +1,20 @@
+
+        <div class="box__uslug">
+          <div class="row align-items-stretch">
+
+            {% for att in attestats %}
+
+            <div class="col-6 col-lg-4">
+              <div class="block__att">
+                <a href="{{ att.document.url }}">
+                  <ul class="specialist__block">
+                    <img class="img-fluid d-block mx-auto" src="{{ att.preview.url }}" class="mask__1" alt=""
+                        data-toggle="tooltip" data-placement="top" title="{{ att.title }}">
+                  </ul>
+                </a>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+
+        </div>
