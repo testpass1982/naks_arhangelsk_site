@@ -26,6 +26,7 @@ SECRET_KEY = 'x-uk$+yb93o*p*=3xic%p0zp5slprn8u)i@d((%3ltr=#$tjf!'
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
+FILE_UPLOAD_PERMISSIONS = 0o644
 
 
 # Application definition
