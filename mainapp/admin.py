@@ -124,7 +124,12 @@ class MessageAdmin(admin.ModelAdmin):
 class MenuAdmin(admin.ModelAdmin):
     list_display = ['title', 'url_code', 'url']
 
-admin.site.register(Attestat)
+
+@admin.register(Attestat)
+class AttestatAdmin(admin.ModelAdmin):
+    list_display = ['title', 'number']
+
+# admin.site.register(Attestat)
 admin.site.register(Feedback)
 admin.site.register(Client)
 admin.site.register(Profile)
